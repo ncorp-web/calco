@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <script> 
+        //fonction qui évalue le chiffre et renvoie la sortie
+        function calculer() 
+        { 
+            let a = document.getElementById("output").value 
+            let b = eval(a) 
+            document.getElementById("output").value = b 
+        } 
+        //fonction qui affiche la valeur
+        function afficher(val) 
+        { 
+            document.getElementById("output").value+=val 
+        } 
+        //fonction qui efface l'écran 
+        function effacer() 
+        { 
+            document.getElementById("output").value = "" 
+        } 
+     </script>
+    
+
+   
+    <style>
+        *{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body{
+            background-color: ;
+        }
+        .wrapper{
+            background-color: rgb(202, 202, 202);
+            box-sizing: border-box;
+            margin: auto auto;
+            margin-top: 100px;
+            height: 600px;
+            width: 350px;
+            border: black solid 1px;
+            box-shadow: 5px 5px 5px 5px rgb(202, 202, 202);
+            border-radius: 10px;
+        }
+        h1{
+            color: white;
+            margin-left: 5px;
+            font-style: italic;
+        }
+        table{
+            width: 95%;
+            background-color:rgba(255, 255, 255, 0.5);
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        td{
+            text-align: center;
+            background-color: aliceblue;
+            border: none;
+            height: 60px;
+            border-radius: 5px;
+        }
+        #egale{
+            height: 75px;
+            
+        }
+        button{
+            background-color:rgba(255, 255, 255, 0.5);
+            border: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color:rgba(0, 0, 0, 0.2); 
+        }
+
+        input{
+            background-color:rgba(255, 255, 255, 0.5);
+            border: none;
+            height: 160px;
+            width: 100%;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrapper">
+        <h1>Scientific</h1>
+        
+            <table id="calc" border="2">
+                <tr>
+                    <td colspan="4"><input type="text" value="" id="output"></td>
+                   
+                </tr>
+                <tr>
+                    <td><button onclick="afficher('1');">1</button></td>
+                    <td><button onclick="afficher('2');">2</button></td>
+                    <td><button onclick="afficher('3');">3</button></td>
+                    <td><button onclick="afficher('+');">+</button></td>
+                    
+                </tr>
+                <tr>
+                    <td><button onclick="afficher('4')">4</button></td>
+                    <td><button onclick="afficher('5')">5</button></td>
+                    <td><button onclick="afficher('6')">6</button></td>
+                    <td><button onclick="afficher('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="afficher('7')">7</button></td>
+                    <td><button onclick="afficher('8')">8</button></td>
+                    <td><button onclick="afficher('9')">9</button></td>
+                    <td><button onclick="afficher('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="afficher('.')">.</button></td>
+                    <td><button onclick="afficher('0')">0</button></td>
+                    <td><button onclick="afficher('%')">%</button></td>
+                    <td><button onclick="afficher('/')">/</button></td> 
+                     
+                </tr>
+                <tr>
+                    <td colspan="3" id="egale"><button onclick="calculer()">=</button></td>
+                    <td><button onclick="effacer()">C</button></td>
+                    
+                    
+                </tr>
+            </table>
+       
+
+    </section>
+
+</body>
+</html>
